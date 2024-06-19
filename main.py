@@ -8,7 +8,9 @@ from random import randint
 # screen resolution
 RES_X = 800
 RES_Y = 600
+
 BG_COLOR = (32, 52, 71)
+KILLED_PLACE = (20, 20)
 
 # images paths
 SPACESHIP_PATH = Path('./images/spaceship.png')
@@ -78,7 +80,7 @@ while is_game:
                 spaceship_x = 0
 
     killed_text = game_font.render(f'Killed: {killed}', True, 'white')
-    screen.blit(killed_text, (20, 20))
+    screen.blit(killed_text, KILLED_PLACE)
 
     screen.blit(spaceship_image, (spaceship_x, spaceship_y))
 
